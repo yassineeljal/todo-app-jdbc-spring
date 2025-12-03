@@ -18,6 +18,12 @@ spec:
         ports:
         - containerPort: 8080
         env:
+        - name: SPRING_DATASOURCE_URL
+          value: "jdbc:h2:file:/data/todo-db;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE"
+        - name: SPRING_DATASOURCE_DRIVER_CLASS_NAME
+          value: "org.h2.Driver"
+        - name: SPRING_DATASOURCE_USERNAME
+          value: "sa"
         - name: DB_PASSWORD
           valueFrom:
             secretKeyRef:
