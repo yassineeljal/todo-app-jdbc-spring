@@ -23,7 +23,7 @@ spec:
         - name: SPRING_DATASOURCE_DRIVER_CLASS_NAME
           value: "org.h2.Driver"
         - name: SPRING_DATASOURCE_USERNAME
-          value: "sa"
+          value: "sa" 
         - name: DB_PASSWORD
           valueFrom:
             secretKeyRef:
